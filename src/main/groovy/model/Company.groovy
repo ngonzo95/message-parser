@@ -4,18 +4,18 @@ import groovy.transform.EqualsAndHashCode
 
 @EqualsAndHashCode(includeFields=true)
 class Company {
-    int id
+    long id
     String company
     String city
     String timezone
 
     @Override
-    public String toString() {
+    String toString() {
         return "Company{" +
                 "id=" + id +
                 ", company='" + company + '\'' +
                 ", city='" + city + '\'' +
                 ", timezone='" + timezone + '\'' +
-                '}';
+                '}'
     }
 }

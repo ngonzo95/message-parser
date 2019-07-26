@@ -10,16 +10,6 @@
     }
   },
   {
-    "id": 2,
-    "firstName": "Morgan",
-    "lastName": "Porter",
-    "reservation": {
-      "roomNumber": 385,
-      "startTimestamp": 1486612719,
-      "endTimestamp": 1486694720
-    }
-  },
-  {
     "id": 3,
     "firstName": "Bridgett",
     "lastName": "Richard",
@@ -27,6 +17,16 @@
       "roomNumber": 141,
       "startTimestamp": 1486520344,
       "endTimestamp": 1486769616
+    }
+  },
+  {
+    "id": 2,
+    "firstName": "Morgan",
+    "lastName": "Porter",
+    "reservation": {
+      "roomNumber": 385,
+      "startTimestamp": 1486612719,
+      "endTimestamp": 1486694720
     }
   },
   {

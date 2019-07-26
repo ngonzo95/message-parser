@@ -1,5 +1,6 @@
 package service
 
+import groovy.json.JsonException
 import model.Company
 import model.Guest
 import model.Reservation
@@ -8,22 +9,24 @@ import org.junit.Test
 
 import java.time.Instant
 
-class JsonToObjectConverterServiceTest {
+import static groovy.test.GroovyAssert.shouldFail
+
+class JsonToObjectConverterServiceTes{
     JsonToObjectConverterService unit
     @Before
     void setup(){
         unit = new JsonToObjectConverterService()
     }
 
-    @Test
+   @Test
     void parseCompanyLoadsFromProperlyFormattedJsonCorrectly(){
         Company firstExpectedCompany = new Company(id:1, company: "Hotel California", city:"Santa Barbara", timezone: "US/Pacific")
         Company secondExpectedCompany = new Company(id:2, company: "The Grand Budapest Hotel", city:"Republic of Zubrowka", timezone: "US/Central")
 
-        List<Company> result = unit.parseCompanies('./src/test/data/Companies.json')
+        Map<Long, Company> result = unit.parseCompanies('./src/test/data/Companies.json')
 
-        assert firstExpectedCompany == result.get(0)
-        assert secondExpectedCompany == result.get(1)
+        assert firstExpectedCompany == result.get(1)
+        assert secondExpectedCompany == result.get(2)
 
     }
 
@@ -40,10 +43,17 @@ class JsonToObjectConverterServiceTest {
                     "startTimestamp": Instant.ofEpochSecond (1486612719),
                     "endTimestamp": Instant.ofEpochSecond (1486694720)))
 
-        List<Guest> result = unit.parseGuests('./src/test/data/Guests.json')
+        Map<Long, Guest> result = unit.parseGuests('./src/test/data/Guests.json')
 
-        assert firstExpectedGuest == result.get(0)
-        assert secondExpectedGuest == result.get(1)
+        assert firstExpectedGuest == result.get(1)
+        assert secondExpectedGuest == result.get(2)
 
+    }
+
+    @Test
+    void parseGuestWhenFileHasJsonErrorThrowsException(){
+        shouldFail(JsonException) {
+            unit.parseGuests('./src/test/data/GuestsWithJsonError.json')
+        }
     }
 }

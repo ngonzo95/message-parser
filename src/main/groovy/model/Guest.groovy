@@ -4,7 +4,7 @@ import groovy.transform.EqualsAndHashCode
 
 @EqualsAndHashCode(includeFields=true)
 class Guest {
-    int id
+    long id
     String firstName
     String lastName
     Reservation reservation
