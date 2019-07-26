@@ -11,7 +11,7 @@ import java.time.Instant
 
 import static groovy.test.GroovyAssert.shouldFail
 
-class JsonToObjectConverterServiceTes{
+class JsonToObjectConverterServiceTest{
     JsonToObjectConverterService unit
     @Before
     void setup(){
