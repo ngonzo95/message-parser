@@ -1,0 +1,23 @@
+plugins {
+    id 'groovy'
+}
+
+group 'sample'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.15'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+sourceSets {
+    test {
+        java {
+            srcDirs = ["test/groovy"]  // Note @Peter's comment below
+        }
+    }
+}
