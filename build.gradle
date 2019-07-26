@@ -17,7 +17,7 @@ dependencies {
 sourceSets {
     test {
         java {
-            srcDirs = ["test/groovy"]  // Note @Peter's comment below
+            srcDirs = ["test/groovy"]
         }
     }
 }
