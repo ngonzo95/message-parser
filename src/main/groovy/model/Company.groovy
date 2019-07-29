@@ -3,7 +3,7 @@ package model
 import groovy.transform.EqualsAndHashCode
 
 @EqualsAndHashCode(includeFields=true)
-class Company {
+class Company implements Parseable {
     long id
     String company
     String city
@@ -17,5 +17,10 @@ class Company {
                 ", city='" + city + '\'' +
                 ", timezone='" + timezone + '\'' +
                 '}'
+    }
+
+    static Company parse(Map map){
+        return new Company(id: map.id, company: map.company,
+                city: map.city, timezone: map.timezone)
     }
 }
