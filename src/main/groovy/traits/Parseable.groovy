@@ -1,4 +1,4 @@
-package model
+package traits
 
 /**
  * This interface enables objects to define how jackson should parse them when they are in json

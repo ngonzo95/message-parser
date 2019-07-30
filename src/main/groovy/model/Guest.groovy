@@ -1,6 +1,7 @@
 package model
 
 import groovy.transform.EqualsAndHashCode
+import traits.Parseable
 
 import java.time.Instant
 

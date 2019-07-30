@@ -3,6 +3,7 @@ package model
 import Enums.TimeOfDayEnumeration
 import Exception.TimezoneNotSpecifiedException
 import groovy.transform.EqualsAndHashCode
+import traits.Parseable
 import util.DateUtil
 
 import java.time.Instant
