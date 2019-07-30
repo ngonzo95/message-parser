@@ -14,6 +14,56 @@ dependencies {
     testCompile( 'junit:junit:4.12', 'org.spockframework:spock-core:1.0-groovy-2.4')
 }
 
+task runBasedOnExistingTemplate(type: JavaExec) {
+
+    def guestIdArg = ""
+    def companyIdArg = ""
+    def templateIdArg = ""
+
+    if ( project.hasProperty("guestId") ) {
+        guestIdArg = Eval.me(guestId)
+    }
+
+    if ( project.hasProperty("companyId") ) {
+        companyIdArg = Eval.me(companyId)
+    }
+
+    if ( project.hasProperty("templateId") ) {
+        templateIdArg = Eval.me(templateId)
+    }
+
+    main = 'server.CreateMessageFromDefiniedTemplate'
+    classpath = sourceSets.main.runtimeClasspath
+    args companyIdArg, guestIdArg, templateIdArg
+}
+
+task runBasedOnCustomTemplate(type: JavaExec) {
+
+    def guestIdArg = ""
+    def companyIdArg = ""
+    def templateArg = ""
+
+    if ( project.hasProperty("guestId") ) {
+        guestIdArg = Eval.me(guestId)
+    }
+
+    if ( project.hasProperty("companyId") ) {
+        companyIdArg = Eval.me(companyId)
+    }
+
+    //TODO look into if it is possible to fix issue where you have to pass template command with single quotes
+    if ( project.hasProperty("template") ) {
+        templateArg = template
+    }
+
+    main = 'server.CreateMessageFromCustomTemplate'
+    classpath = sourceSets.main.runtimeClasspath
+    args companyIdArg, guestIdArg, templateArg
+}
+
+
+
+
 sourceSets {
     test {
         java {
@@ -21,3 +71,4 @@ sourceSets {
         }
     }
 }
+
