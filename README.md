@@ -148,7 +148,9 @@ To verify the correctness of this project I created test suite which tests all o
 outside of the script which collects user input. To ensure the correctness of the script which collects
 and applies user input I manual tested the various cases. If I had more time I would write test cases 
 for this as well. To run the test suit use the command ``./gradlew test`` Once this successfully runs you
-can view the results by opening ``build/reports/tests/test/index.html``
+can view the results by opening ``build/reports/tests/test/index.html``. Also note that the test cases 
+depend on data in ./src/test/data being unchanged. So while you a free to change the data in ./data 
+which is used when running the groovy scripts don't change anything in ./src/test/data
 
 ## Future work
 With more time there is alot that I would do. Throughout the code I have added todos for different 
