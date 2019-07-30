@@ -22,7 +22,14 @@ class CreateMessageFromCustomTemplate {
 
         CreateStringFromTemplateService templateEngine = new CreateStringFromTemplateService()
 
-        println(templateEngine.createString(customTemplate, substitutionMap))
+        try {
+            println(templateEngine.createString(customTemplate, substitutionMap))
+        } catch(MissingPropertyException e){
+            println(e.toString())
+            println("The template provided used an unknown property please refer to the cheatsheet in the readme" +
+                    "for what properties you can use")
+            System.exit(1)
+        }
     }
 
 }
