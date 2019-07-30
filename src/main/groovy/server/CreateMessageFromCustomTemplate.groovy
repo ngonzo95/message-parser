@@ -15,7 +15,7 @@ class CreateMessageFromCustomTemplate {
 
         String customTemplate = args[2]
         if(customTemplate == ""){
-            println("Custom template must not beleft out or set to the empty string to set the template use " +
+            println("Custom template must not be left out or set to the empty string to set the template use " +
                     "Ptemplate='template string'")
             System.exit(1)
         }
