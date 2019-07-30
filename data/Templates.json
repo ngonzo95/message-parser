@@ -2,5 +2,17 @@
   {
     "id": 1,
     "template": "$greetingMessage, welcome to $company.company"
+  },
+  {
+    "id" : 2,
+    "template": "$greetingMessage $guest.firstName, and welcome to $company.company! Room $guest.reservation.roomNumber is now ready you. Enjoy your stay, and let us know if you need anything."
+  },
+  {
+    "id": 3,
+    "template": "Hi, $guest.firstName $guest.lastName your room number is $guest.reservation.roomNumber and your reservation starts at $guest.reservation.startTime"
+  },
+  {
+    "id": 4,
+    "template": "$greetingMessage, in the $company.company $guest.reservation.roomNumber is next to ${guest.reservation.roomNumber + 1}"
   }
 ]
