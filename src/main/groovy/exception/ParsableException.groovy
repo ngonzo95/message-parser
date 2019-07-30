@@ -1,4 +1,4 @@
-package Exception
+package exception
 
 class ParsableException extends RuntimeException {
     ParsableException(String modelName){

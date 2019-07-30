@@ -1,7 +1,7 @@
 package model
 
 import Enums.TimeOfDayEnumeration
-import Exception.TimezoneNotSpecifiedException
+import exception.TimezoneNotSpecifiedException
 import groovy.transform.EqualsAndHashCode
 import traits.Parseable
 import util.DateUtil

@@ -1,6 +1,6 @@
 package service
 
-import Exception.ParsableException
+import exception.ParsableException
 import groovy.json.JsonException
 import model.Company
 import model.GreetingMessage

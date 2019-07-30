@@ -1,6 +1,6 @@
 package model
 
-import Exception.TimezoneNotSpecifiedException
+import exception.TimezoneNotSpecifiedException
 import org.junit.Test
 import spock.lang.Specification
 import util.DateUtil
