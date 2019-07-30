@@ -2,10 +2,7 @@ package service
 
 import exception.ParsableException
 import groovy.json.JsonException
-import model.Company
-import model.GreetingMessage
-import model.Guest
-import model.Reservation
+import model.*
 import org.junit.Before
 import org.junit.Test
 
@@ -60,6 +57,15 @@ class JsonToObjectConverterServiceTest{
         Map result = unit.parseListOfModelObjects('./src/test/data/GreetingMessage.json', GreetingMessage)
 
         assert greetingMessage == result.get(1)
+    }
+
+    @Test
+    void parseTemplateLoadsFromProperlyFormattedJsonCorrectly(){
+        Template template = new Template(id:1, template: '$greetingMessage, welcome to $company.company')
+
+        Map result = unit.parseListOfModelObjects('./src/test/data/Templates.json', Template)
+
+        assert template == result.get(1)
     }
 
     @Test
