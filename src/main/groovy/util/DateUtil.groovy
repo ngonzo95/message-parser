@@ -1,12 +1,12 @@
 package util
 
-import Enums.TimeOfDayEnumeration
+import enums.TimeOfDayEnumeration
 
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
-import static Enums.TimeOfDayEnumeration.*
+import static enums.TimeOfDayEnumeration.*
 
 class DateUtil {
     /**

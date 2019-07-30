@@ -7,7 +7,7 @@ import util.DateUtil
 
 import java.time.Instant
 
-import static Enums.TimeOfDayEnumeration.*
+import static enums.TimeOfDayEnumeration.*
 
 /**
  * Because this test required mocking of static methods a more robust testing framework was needed.

@@ -1,6 +1,6 @@
 package model
 
-import Enums.TimeOfDayEnumeration
+import enums.TimeOfDayEnumeration
 import exception.TimezoneNotSpecifiedException
 import groovy.transform.EqualsAndHashCode
 import traits.Parseable
@@ -8,8 +8,8 @@ import util.DateUtil
 
 import java.time.Instant
 
-import static Enums.TimeOfDayEnumeration.AFTERNOON
-import static Enums.TimeOfDayEnumeration.MORNING
+import static enums.TimeOfDayEnumeration.AFTERNOON
+import static enums.TimeOfDayEnumeration.MORNING
 
 @EqualsAndHashCode(includeFields=true)
 class GreetingMessage implements Parseable{

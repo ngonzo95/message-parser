@@ -1,6 +1,6 @@
 package util
 
-import Enums.TimeOfDayEnumeration
+import enums.TimeOfDayEnumeration
 import org.junit.Test
 
 import java.time.Instant
