@@ -6,8 +6,8 @@ java 12.0.2 but any recent version of java should work. To check your java versi
 do not have java on your machine install it using your favorite package manager or follow the instructions 
 [here](https://docs.oracle.com/en/java/javase/12/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
 
-Once you have java all you need to do is go to the project directory and run `` ./gradlew --version`` if
-using Linux/Mac or `` gradlew.bay --version`` if using Windows. you should get output that looks like
+Once you have java all you need to do is go to the project directory and run ``./gradlew --version`` if
+using Linux/Mac or ``gradlew.bat --version`` if using Windows. you should get output that looks like
 ```
 Gradle 5.2.1
 
@@ -23,8 +23,8 @@ OS:           Mac OS X 10.13.6 x86_64
 ```
 If you do not get output that looks like this it is most likely an issue with your java. Try upgrading it to at least
 12.0.2
-For the rest of the readme I will use the only ./gradlew command but know that if you are using windows you
-should replace ./gradlew with gradlew.bat
+For the rest of the readme I will use the only ``./gradlew`` command but know that if you are using windows you
+should replace ``./gradlew`` with ``gradlew.bat``
 
 ## Groovy and Gradle Warning Message Disclaimer
 After working on this project for a while I realised that every time a groovy task is run in gradle you get
