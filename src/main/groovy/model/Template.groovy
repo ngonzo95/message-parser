@@ -5,7 +5,7 @@ import traits.Parseable
 
 @EqualsAndHashCode(includeFields=true)
 class Template implements Parseable{
-    long id
+    int id
     String template
 
     static Template parse(Map map){

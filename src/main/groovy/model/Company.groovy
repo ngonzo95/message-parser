@@ -5,7 +5,7 @@ import traits.Parseable
 
 @EqualsAndHashCode(includeFields=true)
 class Company implements Parseable {
-    long id
+    int id
     String company
     String city
     String timezone

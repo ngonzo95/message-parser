@@ -17,7 +17,7 @@ class GreetingMessage implements Parseable{
     String afternoonMessage
     String eveningMessage
     String timezone
-    long id
+    int id
 
 
     /**

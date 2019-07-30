@@ -7,7 +7,7 @@ import java.time.Instant
 
 @EqualsAndHashCode(includeFields=true)
 class Guest implements Parseable{
-    long id
+    int id
     String firstName
     String lastName
     Reservation reservation
