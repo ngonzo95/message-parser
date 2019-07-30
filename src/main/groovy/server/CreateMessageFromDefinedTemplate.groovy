@@ -10,7 +10,7 @@ import util.CommandLineUtils
 import static constants.FileLocationConstants.TEMPLATE_PATH
 import static service.GenerateSubstitutionMap.generateSubstitutionMap
 
-class CreateMessageFromDefiniedTemplate {
+class CreateMessageFromDefinedTemplate {
     /**
      * Main method for generation strings from predefined templates
      * @param args
