@@ -3,6 +3,7 @@ package service
 import Exception.ParsableException
 import groovy.json.JsonException
 import model.Company
+import model.GreetingMessage
 import model.Guest
 import model.Reservation
 import org.junit.Before
@@ -49,6 +50,16 @@ class JsonToObjectConverterServiceTest{
         assert firstExpectedGuest == result.get(1)
         assert secondExpectedGuest == result.get(2)
 
+    }
+
+    @Test
+    void parseGreetingMessageLoadsFromProperlyFormattedJsonCorrectly(){
+        GreetingMessage greetingMessage = new GreetingMessage(id:1, morningMessage: "Good morning",
+                eveningMessage: "Good evening", afternoonMessage: "Good afternoon")
+
+        Map result = unit.parseListOfModelObjects('./src/test/data/GreetingMessage.json', GreetingMessage)
+
+        assert greetingMessage == result.get(1)
     }
 
     @Test

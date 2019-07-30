@@ -1,6 +1,6 @@
 package model
 
-
+import Exception.TimezoneNotSpecifiedException
 import org.junit.Test
 import spock.lang.Specification
 import util.DateUtil
@@ -73,5 +73,21 @@ class GreetingMessageTest extends Specification {
             1 * DateUtil.getTimeOfDayEnum(mockInstant, "US/Pacific") >> EVENING
         }
         assert result == greetingMessage.eveningMessage
+    }
+
+    @Test
+    void whenGreetingMessageDoesNotHaveTimezoneSpecifiedThrowTimezoneNotSpecifiedException() {
+        given:
+        GroovyMock(DateUtil, global: true)
+        GroovyMock(Instant, global: true)
+
+        when:
+        GreetingMessage greetingMessage = new GreetingMessage(morningMessage: "morning",
+                afternoonMessage: "afternoon", eveningMessage: "evening")
+
+        String result = "$greetingMessage"
+
+        then:
+        TimezoneNotSpecifiedException ex = thrown()
     }
 }
