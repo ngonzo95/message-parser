@@ -25,6 +25,7 @@ class JsonToObjectConverterService {
         jsonList.collectEntries(){
         [(it.id) : aClass.parse(it)]
         }
+        //TODO throw a custom exception when required fields for an object is missing from the json
     }
 
     private List parseJson(String fileNameAndPath){

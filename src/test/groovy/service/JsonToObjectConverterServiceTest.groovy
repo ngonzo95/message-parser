@@ -64,12 +64,4 @@ class JsonToObjectConverterServiceTest{
             unit.parseListOfModelObjects('./src/test/data/Guests.json', Reservation)
         }
     }
-
-    @Test
-    void parseOnSomeJsonObjectThatDoesNotAlignWithTypeThrowsException(){
-        //TODO finish this test case so that it throws a custom exception
-//        shouldFail(ParsableException) {
-            unit.parseListOfModelObjects('./src/test/data/Guests.json', Company)
-//        }
-    }
 }
