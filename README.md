@@ -31,7 +31,7 @@ For the rest of the readme I will use the ./gradlew
 command but know that if you are using windows you
 should replace ./gradlew with gradlew.bat
 
-##Groovy and Gradle Warning Message Disclaimer
+## Groovy and Gradle Warning Message Disclaimer
 After working on this project for a while I realised 
 that every time a groovy task is run in gradle you get
 the warning message
@@ -50,7 +50,7 @@ One easy work around was to use the groovy console instead
 of gradle but I wanted to make this project as easy to 
 install as possible so I decided to continue to use gradle.
 
-##Running The Template Engine
+## Running The Template Engine
 To run the the template engine with a existing
 template run the following command 
 ```
@@ -97,7 +97,7 @@ which returns
 Good afternoon Latoya, this is a custom template
 ```
 
-##Defining Templates
+## Defining Templates
 The template structure is based on the built in Groovy
 String. In Groovy strings the $ sign represents the 
 desire to execution this code and add the result to
@@ -142,7 +142,7 @@ next to the guests room number you can use
 I recommend looking at some of the provided templates to
 get a feel of how the templating works
 
-##Design Decisions 
+## Design Decisions 
 When designing the template engine I wanted develop
 it in a way that was easily extensible in the future.
 Furthermore I wanted it to be easily robust, testable and 
@@ -180,7 +180,7 @@ getters this made witting the logic in the Reservation
 model to transform startTimestamp into startTime
 easy to implement and easy to use.
 
-##Test Cases
+## Test Cases
 To verify the correctness of this project
 I created partially completed test suite 
 which tests all of the functionality outside of the 
@@ -194,7 +194,7 @@ To run the test cases use the command
 can view the results by opening 
 ``build/reports/tests/test/index.html``
 
-##Future work
+## Future work
 With more time there is alot that I would do. Throughout
 the code I have added todos for different things I would
 like to add but in a nutshell the things I would like to
