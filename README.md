@@ -1,5 +1,5 @@
 # message-parser
-This is a template engine that could be used to send preset messages to a guest of some hotel. Messages can be made and resued by adding them to a template file and guests and hotels can be added or removed as well. This project was made to satisfy a coding challege and was done in aproximatly 10 hours.
+This is a template engine that could be used to send preset messages to a guest of some hotel. Messages can be made and reused by adding them to a template file and guests and hotels can be added or removed as well. This project was made to satisfy a coding challenge and was done in approximately 10 hours.
 ## Getting Started
 This project uses gradle to make running the project easy on any computer. All you need to run the gradle wrapper
 is java and it will automatically install the required packages. The java version I am using on my machine is
